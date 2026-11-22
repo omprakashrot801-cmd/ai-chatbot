@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f5f7fb" />
+    <title>Simple AI Chat</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="chat-card" aria-label="AI chatbot">
+        <header class="topbar">
+          <div class="brand-mark" aria-hidden="true">✦</div>
+          <div class="brand-copy">
+            <h1>Chat assistant</h1>
+            <p><span class="status-dot"></span> Ready to help</p>
+          </div>
+          <span class="mode-badge" title="Replies are simulated in this demo">Mock mode</span>
+        </header>
+
+        <div class="welcome-banner">
+          <span class="welcome-icon" aria-hidden="true">✦</span>
+          <div>
+            <strong>Hi there 👋</strong>
+            <p>I’m a demo assistant. Ask me anything to try the chat.</p>
+          </div>
+        </div>
+
+        <div id="messages" class="messages" role="log" aria-live="polite" aria-relevant="additions text">
+          <article class="message assistant-message">
+            <div class="avatar" aria-hidden="true">✦</div>
+            <div class="message-content">
+              <div class="message-meta"><strong>Assistant</strong><time>Now</time></div>
+              <p>Hello! Send a message and I’ll reply with a sample response.</p>
+            </div>
+          </article>
+        </div>
+
+        <div id="error" class="error-banner" role="alert" hidden></div>
+
+        <form id="chat-form" class="composer">
+          <label class="sr-only" for="message-input">Your message</label>
+          <textarea id="message-input" rows="1" maxlength="2000" placeholder="Type your message..." required></textarea>
+          <div class="composer-footer">
+            <span class="hint">Enter to send <span aria-hidden="true">·</span> Shift + Enter for a new line</span>
+            <button id="send-button" type="submit" aria-label="Send message">
+              <span>Send</span><span aria-hidden="true">↗</span>
+            </button>
+          </div>
+        </form>
+        <footer class="footnote">Demo chat · No API key is used in this browser</footer>
+      </section>
+    </main>
+  </body>
+</html>
